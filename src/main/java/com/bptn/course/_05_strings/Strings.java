@@ -3,6 +3,7 @@ package com.bptn.course._05_strings;
 public class Strings {
 
 	public static void main(String[] args) {
+		// string methods
 		String userName = "testuser";
 		System.out.println(userName.length()); // 8
 		System.out.println(userName.charAt(2)); // s
