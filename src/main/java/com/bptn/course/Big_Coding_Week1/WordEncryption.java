@@ -35,6 +35,8 @@ public class WordEncryption {
 		}
 		print("Encrypted word: " + encrypted);
 
+		scanner.close(); // close scanner object
+
 	}
 
 	public static void print(String str) {

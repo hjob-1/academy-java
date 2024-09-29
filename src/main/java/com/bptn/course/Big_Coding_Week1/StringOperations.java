@@ -10,8 +10,8 @@ public class StringOperations {
 		int choice;
 		String userInput1;
 		String userInput2;
-		boolean stop = false;
-		String restart = "y";
+		boolean stop = false; // Control flag to stop the program
+		String restart = "y"; // Variable to determine if the user wants to continue
 
 		do {
 			stringOperationMenu();
@@ -19,22 +19,24 @@ public class StringOperations {
 
 			switch (choice) {
 
-			case 1:
+			case 1: // Palindrome check
 				print("Palindrome Check");
 				print("Enter a string");
 				userInput1 = scanner.next();
 				palindrome(userInput1);
 				break;
-			case 2:
+
+			case 2:// Reverse the string
 				print("Reverse the string");
 
 				print("Enter a string");
 				userInput1 = scanner.next();
-
+				// revere the string
 				String reversed = new StringBuilder(userInput1).reverse().toString();
 				print(reversed);
 				break;
-			case 3:
+
+			case 3: // Concatenate two strings
 				print("Concatenate two Strings");
 
 				print("Enter The first string:");
@@ -43,9 +45,10 @@ public class StringOperations {
 				print("Enter The Second string:");
 				userInput2 = scanner.next();
 
-				print(userInput1 + userInput2);
+				print(userInput1 + userInput2); // Print concatenated result
 				break;
-			case 4:
+
+			case 4: // String comparison
 				print("String Comparison");
 
 				print("Enter The first string:");
@@ -60,27 +63,27 @@ public class StringOperations {
 				else
 					print("The entered strings are not equal");
 				break;
-			case 5:
+			case 5: // Calculate the length of a string
 				print("Length of a string");
 				print("Enter a string:");
 				userInput1 = scanner.next();
 
 				print("The length of the entered string is: " + userInput1.length());
 				break;
-			default:
+			default: // Handle invalid choices
 				print("Invalid choice! Please make a valid choice.");
-				choice = scanner.nextInt();
+				break;
 
 			}
-
+			// Ask the user if they want to continue
 			print("Do you wish to continue y/n");
 			restart = scanner.next();
 			if (restart.toLowerCase().equals("n"))
-				stop = true;
+				stop = true; // Set stop flag to true if user chooses not to continue
 
-		} while (!stop);
+		} while (!stop); // Continue until user chooses to stop
 
-		scanner.close();
+		scanner.close(); // Close the scanner resource
 	}
 
 	public static void palindrome(String str) {
