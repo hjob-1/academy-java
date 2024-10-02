@@ -29,7 +29,7 @@ class ShoppingCart {
 	public CartItem[] showProductsInCart() {
 		CartItem[] currentItems = new CartItem[itemCount];
 
-		for (int i = 0; i < items.length; i++) {
+		for (int i = 0; i < itemCount; i++) {
 			currentItems[i] = items[i];
 
 		}
