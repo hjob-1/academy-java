@@ -16,6 +16,7 @@ public class IteratorDemo {
 		Iterator<String> iterator = myBooks.iterator();
 
 		while (iterator.hasNext()) {
+
 			System.out.println(iterator.next());
 		}
 
