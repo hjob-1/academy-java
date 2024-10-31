@@ -13,20 +13,21 @@ public class ArrayListDemo {
 		groceries.add("Milk");
 		groceries.add("bread");
 		groceries.add("Eggs");
+		groceries.removeIf((value) -> value.indexOf('M') != -1);
 
 		// R -> read
 		System.out.println("grocery list:" + groceries);
-		System.out.println(groceries.get(2));
+		// System.out.println(groceries.get(2));
 		System.out.println(groceries.getLast());
 		System.out.println(groceries.getFirst());
 
 		// U - Update
-		groceries.set(1, "Coffee");
-		groceries.set(3, "Sugar");// we can not add a new element using set
-		System.out.println("grocery list:" + groceries);
+		// groceries.set(1, "Coffee");
+		// groceries.set(3, "Sugar");// we can not add a new element using set
+		// System.out.println("grocery list:" + groceries);
 
 		// D -> Delete
-		groceries.remove(2);
+		// groceries.remove(2);
 		System.out.println("grocery list:" + groceries);
 
 	}
